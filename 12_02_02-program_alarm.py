@@ -8,8 +8,6 @@ with open("12_02_01.txt", "r") as f:
 
             l[1], l[2] = noun, verb
 
-            print(f"noun: {noun}\nverb: {verb}")
-
             position = 0
 
             while position < len(l):
@@ -33,11 +31,10 @@ with open("12_02_01.txt", "r") as f:
             
             if l[0] == answer:
                 nv = noun * 100 + verb
-                print(f"noun-verb combo that gives {answer} is {nv}")
-                print(noun)
-                print(verb)
+                print(f"the noun-verb combo that gives {answer} is:\n\t{nv}")
                 quit()
             verb += 1
 
         noun += 1
         verb = 0
+        print("invalid input or answer")
